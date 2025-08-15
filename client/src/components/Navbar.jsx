@@ -1,5 +1,6 @@
 import { Car, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,9 +39,11 @@ const Navbar = () => {
 
             <div className="flex items-center space-x-4 ml-4">
               <button className="p-2 text-gray-500 hover:text-blue-600 rounded-full hover:bg-gray-100"></button>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200">
-                Login / Signup
-              </button>
+              <Link to="/login">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                  Login / Signup
+                </button>
+              </Link>
             </div>
           </div>
 
